@@ -9,6 +9,8 @@ pd, a print helper method for debug to Kernel
 
 Overview
 --------
+sometimes, I need debug other people's code, and I'd like to use `pd`, so add this lib to environment variable `RUBYOPT="-r pd"` make this happen.
+
 pd(print debug), for debug only, like p, but use " " between each argument as separator instead of "\n".
 
 * search 'pd' is much easier than 'p' in source file.
@@ -22,6 +24,7 @@ For example:
 	  3
 	pd a, a.length
 	  "foo" 3
+
 
 Usage
 -----
