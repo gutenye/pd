@@ -11,26 +11,37 @@ Overview
 --------
 sometimes, I need debug other people's code, and I'd like to use `pd`, so add this lib to environment variable `RUBYOPT="-r pd"` make this happen.
 
-pd(print debug), for debug only, like p, but use " " between each argument as separator instead of "\n".
+pd(print debug), for debug only, like p, but use ", " between each argument as separator instead of "\n".
 
 * search 'pd' is much easier than 'p' in source file.
 * sometimes use pd is much convient than p
 
 For example:
+	
+	pd :Person, name, age
+	#=>
+	  Person: "Alice", 12
 
-	a="foo"
-	p a, a.length
-	  "foo"
-	  3
-	pd a, a.length
-	  "foo" 3
-
+	p name, age
+	#=>
+	  "Alice"
+	  12
 
 Usage
 -----
 
-	add RUBYOPT="-r pd" as environment variable. 
+	add RUBYOPT as Environment Variable
+	RUBYOPT="-r pd" # for ruby1.9 
+	RUBYOPT="-r/absolute/path/to/pd" # for ruby1.8
 	pd "a","b"
+
+Contributing
+-------------
+
+* report bugs/featues to issue tracker.
+* fork it and pull a request.
+* improve documentation.
+* feel free to post any ideas. 
 
 Install
 ----------

@@ -1,23 +1,15 @@
 module Kernel
-	# *for debug* pd(print debug), like p, but use " " in each argument instead of "\n".
-	# * search 'pd' is much easier than 'p' in source file.
-	# * sometimes use pd is much convient than p
+	# print for debug
 	#
-	# @example
-	#  a="foo"
-	#  p a, a.length
-	#   =>
-	#    "foo"
-	#    3
-	#  pd a, a.length
-	#   =>
-	#    "foo" 3
+	# @overlaod pd(obj, ...)
+	#   @param [Symbol]
+	#   
 	#
-	# @param [Object] *args
-	# @return nil
+	# @overload pd(title, obj, ...)
+	#   @param [Symbol] title if first arg is a Captial Symbol, use it as title
+	#   @return [nil]
 	def pd *args
-		args.each do |arg| print arg.inspect," " end
-		print "\n"
+		puts args.map{|v|v.inspect}.join(", ")
 	end
 
 	# *for debug* print hr. puts '='*14 + " #{name}"
