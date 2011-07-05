@@ -1,11 +1,11 @@
 pd, a print helper method for debug to Kernel
 ==========================================
 
-**Homepage**: [https://github.com/GutenLinux/pd](https://github.com/GutenLinux/pd) <br/>
+**Homepage**: [https://github.com/GutenYe/pd](https://github.com/GutenYe/pd) <br/>
 **Author**: 	Guten <br/>
 **License**: MIT License <br/>
 **Documentation**: [http://rubydoc.info/gems/pd/frames](http://rubydoc.info/gems/pd/frames) <br/>
-**Issue Tracker**: [https://github.com/GutenLinux/pd/issues](https://github.com/GutenLinux/pd/issues) <br/>
+**Issue Tracker**: [https://github.com/GutenYe/pd/issues](https://github.com/GutenYe/pd/issues) <br/>
 
 Overview
 --------

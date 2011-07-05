@@ -11,7 +11,7 @@ a print helper method for debug to Kernel
 
 	s.author = "Guten"
 	s.email = "ywzhaifei@gmail.com"
-	s.homepage = "http://github.com/GutenLinux/pd"
+	s.homepage = "http://github.com/GutenYe/pd"
 	s.rubyforge_project = "xx"
 
 	s.files = `git ls-files`.split("\n")

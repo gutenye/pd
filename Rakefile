@@ -5,6 +5,14 @@ task :release do
 	sh "rm pd-*.gem"
 end
 
+desc "install to local"
+task :install do
+	sh "gem build pd.gemspec"
+	sh "gem install pd-*.gem"
+	sh "rm pd-*.gem"
+end
+
+
 desc "testing the library"
 task :test do
 	sh "rspec --color spec"
