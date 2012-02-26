@@ -1,10 +1,9 @@
-$: << "."
-require "version"
+Kernel.load File.expand_path("../lib/pd/version.rb", __FILE__)
 
 Gem::Specification.new do |s|
 	s.name = "pd"
-	s.version = VERSION::IS
-	s.summary = "a print helper method for debug to Kernel"
+	s.version = Pd_VERSION
+	s.summary = "some helper methods to help debuging"
 	s.description = <<-EOF
 a print helper method for debug to Kernel
 	EOF
@@ -15,4 +14,6 @@ a print helper method for debug to Kernel
 	s.rubyforge_project = "xx"
 
 	s.files = `git ls-files`.split("\n")
+
+  s.add_dependency "awesome_print"
 end

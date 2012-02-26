@@ -1,47 +1,18 @@
-pd, a print helper method for debug to Kernel
+pd, some helper methods to help debuging
 ==========================================
 
-**Homepage**: [https://github.com/GutenYe/pd](https://github.com/GutenYe/pd) <br/>
-**Author**: 	Guten <br/>
-**License**: MIT License <br/>
-**Documentation**: [http://rubydoc.info/gems/pd/frames](http://rubydoc.info/gems/pd/frames) <br/>
-**Issue Tracker**: [https://github.com/GutenYe/pd/issues](https://github.com/GutenYe/pd/issues) <br/>
+| Homepage:      |  https://github.com/GutenYe/pd       |
+|----------------|------------------------------------------------------       |
+| Author:	       | Guten                                                 |
+| License:       | MIT-LICENSE                                                |
+| Documentation: | http://rubydoc.info/gems/pd/frames                |
+| Issue Tracker: | https://github.com/GutenYe/pd/issues |
 
 Overview
 --------
-sometimes, I need debug other people's code, and I'd like to use `pd`, so add this lib to environment variable `RUBYOPT="-r pd"` make this happen.
 
-pd(print debug), for debug only, like p, but use ", " between each argument as separator instead of "\n".
-
-* search 'pd' is much easier than 'p' in source file.
-* sometimes use pd is much convient than p
-
-For example:
-	
-	pd :Person, name, age
-	#=>
-	  Person: "Alice", 12
-
-	p name, age
-	#=>
-	  "Alice"
-	  12
-
-Usage
------
-
-	add RUBYOPT as Environment Variable
-	RUBYOPT="-r pd" # for ruby1.9 
-	RUBYOPT="-r/absolute/path/to/pd" # for ruby1.8
-	pd "a","b"
-
-Contributing
--------------
-
-* report bugs/featues to issue tracker.
-* fork it and pull a request.
-* improve documentation.
-* feel free to post any ideas. 
+1. add 'pd' method to Kernel, 'pd' is much easy to search than orignal 'p' method.
+2. include 'awesome_print' gem
 
 Install
 ----------
@@ -50,4 +21,13 @@ Install
 
 Copyright
 ---------
-Copyright &copy; 2011 by Guten. this library released under MIT-License, See {file:LICENSE} for futher details.
+
+(the MIT License)
+
+Copyright (c) 2011 Guten
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
