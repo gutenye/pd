@@ -1,15 +1,13 @@
 require "stringio"
+require "pd"
+
+$spec_dir = File.expand_path("..", __FILE__)
+$spec_data = File.expand_path("../data", __FILE__)
 
 RSpec.configure do |config|
-
-  # a helper to capture stream
-  #
-  # @example
-  #   capture(:stdout){..}
-  # @param [Symbol] stream
-  # @return [String] print result in block
-  def capture stream
+  def capture(stream)
     begin
+      stream = stream.to_s
       eval "$#{stream} = StringIO.new"
       yield
       result = eval("$#{stream}").string
@@ -19,4 +17,29 @@ RSpec.configure do |config|
 
     result
   end
+
+  alias :silence :capture
 end
+
+module Kernel 
+private
+
+  def xdescribe(*args, &blk)
+    describe *args do
+      pending "xxxxxxxxx"
+    end
+  end
+
+  def xcontext(*args, &blk)
+    context *args do
+      pending "xxxxxxxxx"
+    end
+  end
+
+  def xit(*args, &blk)
+    it *args do
+      pending "xxxxxxxx"
+    end
+  end
+end
+

@@ -1,24 +1,43 @@
-desc "release to rubygems"
+sudo = Process.pid==0 ? "" : "sudo"
+
+desc "build a gem file"
 task :release do
-	sh "gem build pd.gemspec"
-	sh "gem push pd-*.gem"
-	sh "rm pd-*.gem"
+	run "gem build pd.gemspec"
+	run "gem push *.gem"
+  run "#{sudo} gem install *.gem"
+	run "rm *.gem"
 end
 
-desc "install to local"
+desc "install a gem file"
 task :install do
-	sh "gem build pd.gemspec"
-	sh "gem install pd-*.gem"
-	sh "rm pd-*.gem"
+	run "gem build pd.gemspec"
+	run "#{sudo} gem install *.gem"
+	run "rm *.gem"
 end
 
-
-desc "testing the library"
+desc "autotest with watchr"
 task :test do
-	sh "rspec --color spec"
+	run "watchr pd.watchr"
 end
 
-def sh cmd
+desc "testing the libraray"
+namespace :test do
+	task :all do
+		run "rspec spec"
+	end
+end
+
+desc "run yard server --reload"
+task :doc do
+	run "yard server --reload"
+end
+
+desc "clean up"
+task :clean do
+	run "rm *.gem"
+end
+
+def run cmd
 	puts cmd
 	system cmd
 end

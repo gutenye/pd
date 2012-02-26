@@ -1,3 +1,5 @@
+autoload :Pd_VERSION, "pd/version"
+
 module Kernel
 	# print for debug
 	#
@@ -9,7 +11,7 @@ module Kernel
 	#   @param [Symbol] title if first arg is a Captial Symbol, use it as title
 	#   @return [nil]
 	def pd(*args)
-		puts args.map{|v|v.inspect}.join(", ")
+		puts args.map{|v|v.inspect}.join(" ")
 	end
 
 	# print hr. puts '='*14 + " #{name}"

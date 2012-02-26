@@ -1,5 +1,4 @@
 require "spec_helper"
-require "pd"
 
 describe Kernel do
 	describe "#pd" do
@@ -7,7 +6,7 @@ describe Kernel do
 			message = capture :stdout do
 				pd "foo", "bar"
 			end
-			message.should =~ /"foo" "bar"/
+			message.should == %~"foo" "bar"\n~
 		end
 	end
 
@@ -19,5 +18,4 @@ describe Kernel do
 			message.should =~ /======.*foo/
 		end
 	end
-
 end
