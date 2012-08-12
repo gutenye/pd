@@ -18,6 +18,11 @@ Install
 
 	gem install pd
 
+Requirements
+------------
+
+* ruby 1.8.7, 1.9.3; jruby 18, 19 mode; rbx 18, 19 mode
+
 Copyright
 ---------
 
