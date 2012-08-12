@@ -1,5 +1,4 @@
-pd, some helper methods to help debuging
-==========================================
+# pd, some helper methods to help debuging [![Build Status](https://secure.travis-ci.org/GutenYe/pd.png)](http://travis-ci.org/GutenYe/pd)
 
 | Homepage:      |  https://github.com/GutenYe/pd       |
 |----------------|------------------------------------------------------       |
