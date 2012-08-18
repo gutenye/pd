@@ -1,34 +1,31 @@
 # pd, some helper methods to help debuging [![Build Status](https://secure.travis-ci.org/GutenYe/pd.png)](http://travis-ci.org/GutenYe/pd)
 
-| Homepage:      |  https://github.com/GutenYe/pd       |
-|----------------|------------------------------------------------------       |
-| Author:	       | Guten                                                 |
-| License:       | MIT-LICENSE                                                |
-| Documentation: | http://rubydoc.info/gems/pd/frames                |
+|                |                                      |
+|----------------|--------------------------------------|
+| Homepage:      | https://github.com/GutenYe/pd        |
+| Author:	       | Guten                                |
+| License:       | MIT-LICENSE                          |
+| Documentation: | http://rubydoc.info/gems/pd/frames   |
 | Issue Tracker: | https://github.com/GutenYe/pd/issues |
+| Platforms:     | Ruby 1.8.7, 1.9.3; JRuby; Rubinius   |
 
 Overview
 --------
 
-1. add 'pd' method to Kernel, 'pd' is much easy to search than orignal 'p' method.
-2. include 'awesome_print' gem
+1. add `pd` method to Kernel, `pd` is much easy to search than orignal `p` method.
+2. require "pp"
 
 Install
 ----------
 
-	gem install pd
-
-Requirements
-------------
-
-* ruby 1.8.7, 1.9.3; jruby 18, 19 mode; rbx 18, 19 mode
+	[sudo] gem install pd
 
 Copyright
 ---------
 
 (the MIT License)
 
-Copyright (c) 2011 Guten
+Copyright (c) 2011-2012 Guten
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

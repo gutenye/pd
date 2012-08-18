@@ -14,6 +14,4 @@ a print helper method for debug to Kernel
 	s.rubyforge_project = "xx"
 
 	s.files = `git ls-files`.split("\n")
-
-  s.add_dependency "awesome_print"
 end

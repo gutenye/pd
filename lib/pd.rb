@@ -1,15 +1,16 @@
 autoload :Pd_VERSION, "pd/version"
 
 module Kernel
+private
+
 	# print for debug
 	#
 	# @overlaod pd(obj, ...)
-	#   @param [Symbol]
-	#   
-	#
-	# @overload pd(title, obj, ...)
-	#   @param [Symbol] title if first arg is a Captial Symbol, use it as title
-	#   @return [nil]
+  #
+  # @example
+  #
+  #  pd("a", 2, :foo) ->  "a" 2 :foo
+  #
 	def pd(*args)
 		puts args.map{|v|v.inspect}.join(" ")
 	end
@@ -23,5 +24,4 @@ module Kernel
 	end
 end
 
-require "ap"
-
+require "pp"
